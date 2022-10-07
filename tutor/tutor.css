@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Poppins:wght@200&display=swap');
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#text {
+    padding: 9px 12px;
+    margin-left: 32px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    padding: 9px 12px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.submit {
+    padding: 9px 12px;
+    margin-left: 32px;
+    margin-top: 20px;
+    border-color: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    margin-left: 36px;
+    color: red;
+    font-family: 'Fredoka', sans-serif;
+}
+
+#demo {
+    margin-top: 20px;
+    font-family: 'Fredoka', sans-serif;
+}
