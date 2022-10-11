@@ -40,8 +40,8 @@ ul a {
     height: 100vh;
     text-align: center;
     padding: 30px;
-    transform: translate(00px);
-    transition: 3s;
+    transform: translate(-500px);
+    transition: 1s;
 }
 
 h2 {
@@ -61,6 +61,7 @@ li {
 
 .showcontainer {
     transform: translate(0px);
+    transition: 1s;
 }
 
 ul:last-child a {
