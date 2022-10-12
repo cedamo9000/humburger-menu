@@ -10,9 +10,9 @@
 .sign-up-page {
     background-color: white;
     width: 309px;
-    height: 493px;
+    height: 557px;
     margin: auto;
-    margin-top: 91px;
+    margin-top: 44px;
     border-radius: 15px 15px 0px;
 }
 
@@ -24,14 +24,16 @@ body {
 .sign-up-page .demo {
     color: crimson;
     text-align: center;
-    border-bottom: 2px solid crimson;
     justify-content: space-around;
     display: flex;
+    align-items: center;
+    font-size: 30px;
 }
 
 .email {
     padding: 8px 40px;
     margin-left: 17px;
+    border-radius: 5px;
 }
 
 .file {
@@ -40,29 +42,34 @@ body {
 
 .password {
     padding: 8px 40px;
+    border-radius: 5px;
     margin-left: 17px;
 }
 
 .username {
     padding: 8px 40px;
+    border-radius: 5px;
     margin-left: 17px;
+}
+
+.error {
+    text-align: center;
+    padding: 8px 42px;
+    border-radius: 5px;
+    background: #f8d7da;
+    position: absolute;
+    margin-left: 22px;
 }
 
 .phone-number {
     padding: 8px 40px;
     margin-left: 17px;
+    border-radius: 5px;
 }
 
 .username {
     margin-top: 30px;
-}
-
-.email-label {
-    margin-left: 17px;
-}
-
-.password-label {
-    margin-left: 17px;
+    border-radius: 5px;
 }
 
 p {
@@ -71,6 +78,13 @@ p {
 
 .submit {
     margin-left: 17px;
-    padding: 7px 77px;
+    padding: 13px 77px;
     margin-top: 15px;
+    background-color: crimson;
+    border: none;
+    border-radius: 5px;
+}
+
+.sign-up-page .dre .sign-up {
+    margin-top: -10px;
 }
