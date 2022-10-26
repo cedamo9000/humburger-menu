@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="login.css">
 </head>
 
+
 <body>
+
     <div class="sign-up-page">
-        <form action="">
+        <form action="" id="loginform">
             <br>
 
             <div class="dre">
@@ -25,10 +27,10 @@
 
 
                 <p class="p">email</p>
-                <input type="text" class="password" required>
+                <input type="text" class="password" id="email" required>
 
                 <p class="p">password</p>
-                <input type="text" class="password" required>
+                <input type="text" class="password" id="password" required>
 
 
                 <input type="submit" value="continue to chat" class="submit">
@@ -42,4 +44,6 @@
     </form>
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.12.1/firebase-app.js"></script>
+    <script src="login.js"></script>
 </body>
