@@ -16,24 +16,29 @@
     <div class="sign-up-page">
         <form action="" id="loginform">
             <br>
-
+            <br>
+            <br>
             <div class="dre">
                 <p class="demo">Chat App</p>
                 <br>
-                <div class="error">error will appear here</div>
+                <div class="error">
+                    <p id="error">error</p>
+                </div>
                 <br>
-
+                <br>
                 <br>
 
 
                 <p class="p">email</p>
                 <input type="text" class="password" id="email" required>
-
+                <br>
+                <br>
                 <p class="p">password</p>
                 <input type="text" class="password" id="password" required>
+                <br>
 
-
-                <input type="submit" value="continue to chat" class="submit">
+                <input type="submit" value="continue to chat" class="submit" onclick="validate()">
+                <br>
                 <br>
                 <br>
                 <p class="sign-up">Not Yet sign up?<a href="create account.html">Create account</a></p>
@@ -45,5 +50,5 @@
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.12.1/firebase-app.js"></script>
-    <script src="login.js"></script>
+    <script src="login2.js"></script>
 </body>
