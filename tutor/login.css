@@ -10,7 +10,7 @@
 .sign-up-page {
     background-color: white;
     width: 307px;
-    height: 407px;
+    height: 445px;
     margin: auto;
     margin-top: 44px;
     border-radius: 15px 15px 0px;
@@ -68,7 +68,6 @@ input {
     background: #f8d7da;
     position: absolute;
     margin-left: 22px;
-    display: none;
 }
 
 .phone-number {
