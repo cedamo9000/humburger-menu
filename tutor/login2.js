@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyB7Uh0N3WkLkcUN5PQKiXnVKNf3_4JxXa4",
@@ -14,4 +14,21 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const database = getDatabase(app);
+const submit = document.querySelector('submitform');
+
+submit.addEventListener('click', (e) => {
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+
+    set(ref(database, 'users/' + usersLogin), {
+            useremail: email,
+            password: password
+        }).then(() => {
+            alert('Data saved successfully!');
+        })
+        .catch((error) => {
+            alert(' The write failed...');
+        });
+
+});
