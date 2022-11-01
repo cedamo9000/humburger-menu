@@ -1,24 +1,34 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyB7Uh0N3WkLkcUN5PQKiXnVKNf3_4JxXa4",
     authDomain: "flipflop-faac3.firebaseapp.com",
+    databaseURL: "https://flipflop-faac3-default-rtdb.firebaseio.com",
     projectId: "flipflop-faac3",
     storageBucket: "flipflop-faac3.appspot.com",
     messagingSenderId: "82173479146",
-    appId: "1:82173479146:web:b073124e8afa836f2a2f93",
-    measurementId: "G-WWKF30340X"
+    appId: "1:82173479146:web:064eb6789fb925252a2f93",
+    measurementId: "G-B3DQCK8GW1"
 };
-//initialize firebaseapp
-firebase.initializeApp(firebaseConfig);
-//reference
-const loginform = firebase.database().ref('flipflop');
-document.getElementById('loginform').addEventListener('submit', submitform);
 
-function submitform(e) {
-    e.preventDefault();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const submit = document.querySelector('loginform');
+
+submit.addEventListener('click', (e) => {
     var email = document.getElementById('email');
     var password = document.getElementById('password');
-    console.log(email, password);
-}
-const getElementVal = (id) => {
-    return document.getElementById(id).value;
-}
+
+    set(ref(database, 'users/' + usersLogin), {
+            useremail: email,
+            password: password
+        }).then(() => {
+            alert('Data saved successfully!');
+        })
+        .catch((error) => {
+            alert(' The write failed...');
+        });
+
+});
